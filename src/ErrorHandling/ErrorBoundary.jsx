@@ -8,9 +8,7 @@ export class ErrorBoundary extends Component {
       hasError: false,
     };
   }
-  // Error boundary has two phase method
-  // 1 . getDerivedStateFrom(error)
-  // 2.  componentDidCatchError( error, info)
+  
 
   static getDerivedStateFromError(error) {
     return {
@@ -22,7 +20,7 @@ export class ErrorBoundary extends Component {
       return <h1>Something went wrong</h1>;
     } else {
         return this.props.children;
-      // this refers to the component that we are actually rendering
+      
     }
   }
 }
